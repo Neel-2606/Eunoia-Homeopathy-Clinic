@@ -12,7 +12,7 @@ const StudentPortal: React.FC = () => {
           <div className="w-16 h-16 bg-gray-800 rounded-2xl flex items-center justify-center mx-auto mb-6 text-primary">
             <GraduationCap size={32} />
           </div>
-          <h1 className="text-4xl md:text-5xl font-serif font-bold mb-6">Student & Intern Portal</h1>
+          <h1 className="text-4xl md:text-5xl font-serif font-bold mb-6">Student and Intern Portal</h1>
           <p className="text-gray-400 max-w-2xl mx-auto text-lg leading-relaxed">
             Enhance your clinical knowledge. Access advanced resources on the Organon, Materia Medica, and Repertory exclusively for students of Dr. Hetal Pandav.
           </p>
