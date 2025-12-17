@@ -30,9 +30,8 @@ const Footer: React.FC = () => {
             <h4 className="text-lg font-bold mb-4 border-b border-gray-700 pb-2 inline-block">Quick Links</h4>
             <ul className="space-y-2 text-sm text-gray-400">
               <li><a href="#" className="hover:text-primary transition-colors">Home</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Patient Portal</a></li>
               <li><a href="#/student" className="hover:text-primary transition-colors">Student Portal</a></li>
-              <li><a href="#about" className="hover:text-primary transition-colors">About Dr. Hetal</a></li>
+              <li><a href="#/contact" className="hover:text-primary transition-colors">Contact Us</a></li>
             </ul>
           </div>
 
