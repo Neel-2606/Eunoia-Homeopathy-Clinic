@@ -9,7 +9,7 @@ const AboutPage: React.FC = () => {
                 <div className="container mx-auto px-4 text-center">
                     <h1 className="text-4xl md:text-5xl font-serif font-bold text-gray-900 mb-6">About Us</h1>
                     <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                        Dr. Patel's Homeopathy & Weight Loss Centre is dedicated to holistic healing under the expert guidance of Dr. Hetal Pandav.
+                        Experience the power of holistic healing under the expert guidance of Dr. Hetal Pandav.
                     </p>
                 </div>
             </section>
@@ -83,7 +83,7 @@ const AboutPage: React.FC = () => {
 
                             <div className="p-6 md:pl-10 flex-grow flex flex-col justify-center">
                                 <h3 className="text-xl font-bold text-[#802640] mb-2 flex items-center">
-                                    Honor in Practice <span className="ml-2 text-xs opacity-50 text-black font-normal uppercase tracking-wider">(Holistic Healing)</span>
+                                    Healing with Harmony <span className="ml-2 text-xs opacity-50 text-black font-normal uppercase tracking-wider">(Holistic Healing)</span>
                                 </h3>
                                 <p className="text-gray-700 leading-relaxed text-sm">
                                     Addressing the physical, emotional, and mental aspects of health for complete well-being. At our core, we abide by the timeless virtue of honor.
@@ -98,7 +98,7 @@ const AboutPage: React.FC = () => {
                             </div>
                             <div className="p-6 md:pl-10 flex-grow flex flex-col justify-center">
                                 <h3 className="text-xl font-bold text-[#4a7a23] mb-2 flex items-center">
-                                    Excellence Embodied <span className="ml-2 text-xs opacity-50 text-black font-normal uppercase tracking-wider">(Empathetic Care)</span>
+                                  Empowering Patient Care <span className="ml-2 text-xs opacity-50 text-black font-normal uppercase tracking-wider">(Empathetic Care)</span>
                                 </h3>
                                 <p className="text-gray-700 leading-relaxed text-sm">
                                     Listening to your story with compassion. Our pursuit of excellence is relentless, ensuring top-tier services and unparalleled satisfaction.
@@ -128,7 +128,7 @@ const AboutPage: React.FC = () => {
                             </div>
                             <div className="p-6 md:pl-10 flex-grow flex flex-col justify-center">
                                 <h3 className="text-xl font-bold text-[#802640] mb-2 flex items-center">
-                                    Anchored by Accountability <span className="ml-2 text-xs opacity-50 text-black font-normal uppercase tracking-wider">(Advanced Homoeopathy)</span>
+                                    Aligned with Modern Homeopathy <span className="ml-2 text-xs opacity-50 text-black font-normal uppercase tracking-wider">(Advanced Homoeopathy)</span>
                                 </h3>
                                 <p className="text-gray-700 leading-relaxed text-sm">
                                     Utilizing modern advancements. We are fully conscious of our actions and embrace ownership with grace, poised to face any outcomes.
