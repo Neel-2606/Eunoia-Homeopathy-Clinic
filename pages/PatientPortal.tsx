@@ -194,23 +194,7 @@ const PatientPortal: React.FC = () => {
         </div>
       </section>
 
-      {/* FACILITIES STRIP */}
-      <section className="bg-gray-900 py-12">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-white text-center">
-            {FACILITIES.map((facility, idx) => (
-              <div key={idx} className="flex flex-col items-center gap-3">
-                <div className="p-3 bg-white/10 rounded-full">
-                  <facility.icon size={24} className="text-secondary" />
-                </div>
-                <h3 className="font-bold text-lg">{facility.text}</h3>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ Accordion */}
+       {/* FAQ Accordion */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4 max-w-3xl">
           <h2 className="text-3xl font-serif font-bold text-center text-gray-900 mb-12">Frequently Asked Questions</h2>
