@@ -2,16 +2,16 @@ import React from 'react';
 
 const HealthImagesCarousel: React.FC = () => {
     const images = [
+        { src: '/Client images/child_cartoon.avif', alt: 'Child Care' },
         { src: '/Client images/Digestive.jpg', alt: 'Digestive Health' },
-        { src: '/Client images/Dipression.webp', alt: 'Depression Treatment' },
-        { src: '/Client images/Female-Menstrual-system.webp', alt: 'Female Menstrual Health' },
-        { src: '/Client images/Hair_removal.webp', alt: 'Hair Treatment' },
-        { src: '/Client images/Nerve_disorder.jpg', alt: 'Nerve Disorders' },
-        { src: '/Client images/child_cartoon.avif', alt: 'Child Health' },
+        { src: '/Client images/Dipression.webp', alt: 'Lifestyle Diseases' },
+        { src: '/Client images/Female-Menstrual-system.webp', alt: "Women's Health" },
         { src: '/Client images/fungus_khujali.jpg', alt: 'Skin Conditions' },
-        { src: '/Client images/lung-cancer.jpg', alt: 'Respiratory Health' },
-        { src: '/Client images/mental_health.jpg', alt: 'Mental Health' },
-        { src: '/Client images/musculoskeletal-disorders.webp', alt: 'Musculoskeletal Health' },
+        { src: '/Client images/Hair_removal.webp', alt: 'Hair Rejuvenation' },
+        { src: '/Client images/lung-cancer.jpg', alt: 'Respiratory' },
+        { src: '/Client images/mental_health.jpg', alt: 'Mental Wellness' },
+        { src: '/Client images/musculoskeletal-disorders.webp', alt: 'Musculoskeletal' },
+        { src: '/Client images/Nerve_disorder.jpg', alt: 'Nerve Disorders' },
         { src: '/Client images/urinary.jpg', alt: 'Urinary Health' },
     ];
 
@@ -37,30 +37,31 @@ const HealthImagesCarousel: React.FC = () => {
 
             <div className="relative">
                 {/* Gradient Overlays for fade effect */}
-                <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
-                <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
+                <div className="absolute left-0 top-0 bottom-0 w-40 bg-gradient-to-r from-blue-50 to-transparent z-10 pointer-events-none"></div>
+                <div className="absolute right-0 top-0 bottom-0 w-40 bg-gradient-to-l from-green-50 to-transparent z-10 pointer-events-none"></div>
 
                 {/* Scrolling Container */}
-                <div className="flex animate-scroll-infinite hover:pause-animation">
+                <div className="flex animate-scroll-infinite">
                     {duplicatedImages.map((image, index) => (
                         <div
                             key={index}
-                            className="flex-shrink-0 mx-4 group"
+                            className="flex-shrink-0 mx-4"
                             style={{ width: '320px' }}
                         >
-                            <div className="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 bg-white border border-gray-100">
+                            <div className="relative overflow-hidden rounded-2xl shadow-md bg-white border-[3px] border-rose-400 transition-all duration-300 hover:shadow-xl active:shadow-2xl active:ring-4 active:ring-rose-300/50 active:border-rose-500 cursor-pointer">
+                                {/* Image Container */}
                                 <div className="aspect-[4/3] overflow-hidden">
                                     <img
                                         src={image.src}
                                         alt={image.alt}
-                                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                                        className="w-full h-full object-cover"
                                         loading="lazy"
                                     />
                                 </div>
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                    <div className="absolute bottom-0 left-0 right-0 p-6">
-                                        <p className="text-white font-bold text-lg">{image.alt}</p>
-                                    </div>
+
+                                {/* Label Below Image */}
+                                <div className="p-4 bg-white border-t-2 border-gray-100">
+                                    <p className="text-gray-800 font-bold text-center text-base">{image.alt}</p>
                                 </div>
                             </div>
                         </div>
@@ -70,20 +71,16 @@ const HealthImagesCarousel: React.FC = () => {
 
             <style>{`
         @keyframes scroll-infinite {
-          0% {
+          from {
             transform: translateX(0);
           }
-          100% {
-            transform: translateX(-50%);
+          to {
+            transform: translateX(calc(-320px * 11 - 32px * 11));
           }
         }
 
         .animate-scroll-infinite {
-          animation: scroll-infinite 40s linear infinite;
-        }
-
-        .pause-animation:hover {
-          animation-play-state: paused;
+          animation: scroll-infinite 55s linear infinite;
         }
       `}</style>
         </section>
