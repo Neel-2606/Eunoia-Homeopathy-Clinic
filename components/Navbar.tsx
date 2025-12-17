@@ -9,6 +9,7 @@ const Navbar: React.FC = () => {
 
   const navLinks = [
     { name: 'Home', path: '/' },
+    { name: 'About Us', path: '/about' },
     { name: 'Student Portal', path: '/student' },
     { name: 'Contact Us', path: '/contact' },
   ];
@@ -19,7 +20,7 @@ const Navbar: React.FC = () => {
       <div className="bg-primary text-white text-xs py-2 px-4">
         <div className="container mx-auto flex flex-col md:flex-row justify-between items-center gap-2">
           <div className="flex items-center gap-4">
-             <span className="flex items-center gap-1 opacity-90 hover:opacity-100 transition-opacity cursor-default">
+            <span className="flex items-center gap-1 opacity-90 hover:opacity-100 transition-opacity cursor-default">
               <MapPin size={12} /> Gotri, Vadodara
             </span>
             <a href={`tel:${CONTACT_INFO.phone}`} className="flex items-center gap-1 opacity-90 hover:opacity-100 transition-opacity">
@@ -34,11 +35,11 @@ const Navbar: React.FC = () => {
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
-          
+
           {/* Logo Section */}
           <Link to="/" className="flex items-center gap-3 group">
             <div className="relative w-12 h-12 md:w-14 md:h-14 flex items-center justify-center bg-rose-50 rounded-full border border-primary/20 overflow-hidden group-hover:shadow-md transition-all">
-                 <img src="https://picsum.photos/seed/lotuslogo/100/100" alt="Lotus Logo" className="object-cover w-full h-full opacity-90" /> 
+              <img src="https://picsum.photos/seed/lotuslogo/100/100" alt="Lotus Logo" className="object-cover w-full h-full opacity-90" />
             </div>
             <div className="flex flex-col">
               <h1 className="text-xl md:text-2xl font-serif font-bold text-gray-800 leading-tight group-hover:text-primary transition-colors">
@@ -58,11 +59,10 @@ const Navbar: React.FC = () => {
                   key={idx}
                   to={link.path}
                   end={link.path === '/'}
-                  className={({ isActive }) => 
-                    `px-4 py-2 text-sm font-semibold rounded-full transition-all duration-300 ${
-                      isActive && link.path !== '/' 
-                        ? 'text-primary bg-rose-50' 
-                        : 'text-gray-600 hover:text-primary hover:bg-gray-50'
+                  className={({ isActive }) =>
+                    `px-4 py-2 text-sm font-semibold rounded-full transition-all duration-300 ${isActive && link.path !== '/'
+                      ? 'text-primary bg-rose-50'
+                      : 'text-gray-600 hover:text-primary hover:bg-gray-50'
                     }`
                   }
                 >
@@ -70,7 +70,7 @@ const Navbar: React.FC = () => {
                 </NavLink>
               ))}
             </nav>
-            <Link 
+            <Link
               to="/book-appointment"
               className="flex items-center gap-2 bg-secondary hover:bg-emerald-700 text-white px-6 py-2.5 rounded-full font-bold text-sm transition-all shadow-md transform hover:-translate-y-0.5 hover:shadow-lg"
             >
@@ -98,8 +98,7 @@ const Navbar: React.FC = () => {
                 to={link.path}
                 onClick={() => setIsOpen(false)}
                 className={({ isActive }) =>
-                  `block px-4 py-3 rounded-lg text-sm font-medium transition-colors ${
-                    isActive ? 'bg-rose-50 text-primary' : 'text-gray-700 hover:bg-gray-50'
+                  `block px-4 py-3 rounded-lg text-sm font-medium transition-colors ${isActive ? 'bg-rose-50 text-primary' : 'text-gray-700 hover:bg-gray-50'
                   }`
                 }
               >
@@ -107,7 +106,7 @@ const Navbar: React.FC = () => {
               </NavLink>
             ))}
             <div className="pt-2">
-              <Link 
+              <Link
                 to="/book-appointment"
                 onClick={() => setIsOpen(false)}
                 className="flex items-center justify-center gap-2 bg-secondary text-white w-full py-3 rounded-lg font-bold text-sm shadow-sm active:scale-95 transition-transform"

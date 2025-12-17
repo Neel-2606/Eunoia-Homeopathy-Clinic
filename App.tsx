@@ -7,6 +7,7 @@ import PatientPortal from './pages/PatientPortal';
 import StudentPortal from './pages/StudentPortal';
 import ContactPage from './pages/ContactPage';
 import BookAppointmentPage from './pages/BookAppointmentPage';
+import AboutPage from './pages/AboutPage';
 
 // ScrollToTop component to handle scroll position on route change
 const ScrollToTop = () => {
@@ -23,9 +24,10 @@ const App: React.FC = () => {
       <ScrollToTop />
       <div className="flex flex-col min-h-screen font-sans text-gray-800">
         <Navbar />
-        
+
         <Routes>
           <Route path="/" element={<PatientPortal />} />
+          <Route path="/about" element={<AboutPage />} />
           <Route path="/student" element={<StudentPortal />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/book-appointment" element={<BookAppointmentPage />} />
