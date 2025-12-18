@@ -101,54 +101,52 @@ const PatientPortal: React.FC = () => {
         </div>
       </section>
 
-      {/* WHY CHOOSE US: Ultra Premium Medical Design */}
-      <section className="py-32 bg-gradient-to-b from-white via-rose-50/30 to-white relative overflow-hidden">
+      {/* WHY CHOOSE US: Ultra Premium Medical Design - Mobile Optimized */}
+      <section className="py-16 sm:py-24 lg:py-32 bg-gradient-to-b from-white via-rose-50/30 to-white relative overflow-hidden">
         {/* Enhanced Decorative Elements */}
-        <div className="absolute top-20 left-10 w-96 h-96 bg-gradient-to-br from-rose-100/40 to-green-100/40 rounded-full mix-blend-multiply filter blur-3xl opacity-60 animate-pulse"></div>
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-gradient-to-tl from-green-100/40 to-rose-100/40 rounded-full mix-blend-multiply filter blur-3xl opacity-60 animate-pulse" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute top-20 left-10 w-64 sm:w-96 h-64 sm:h-96 bg-gradient-to-br from-rose-100/40 to-green-100/40 rounded-full mix-blend-multiply filter blur-3xl opacity-60 animate-pulse"></div>
+        <div className="absolute bottom-20 right-10 w-64 sm:w-96 h-64 sm:h-96 bg-gradient-to-tl from-green-100/40 to-rose-100/40 rounded-full mix-blend-multiply filter blur-3xl opacity-60 animate-pulse" style={{ animationDelay: '1s' }}></div>
 
-        {/* Floating Medical Icons Background */}
-        <div className="absolute inset-0 opacity-5">
+        {/* Floating Medical Icons Background - Hidden on mobile */}
+        <div className="absolute inset-0 opacity-5 hidden md:block">
           <div className="absolute top-1/4 left-1/4 text-primary"><Activity size={80} /></div>
           <div className="absolute bottom-1/3 right-1/4 text-secondary"><ShieldCheck size={80} /></div>
         </div>
 
-        <div className="container mx-auto px-4 relative z-10">
-          {/* Enhanced Header */}
-          <div className="text-center max-w-3xl mx-auto mb-24">
-            <div className="inline-flex items-center gap-2 px-6 py-2 bg-white/80 backdrop-blur-sm border border-rose-100 rounded-full shadow-sm mb-6">
+        <div className="container mx-auto px-4 sm:px-6 relative z-10">
+          {/* Enhanced Header - Mobile Responsive */}
+          <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16 lg:mb-24">
+            <div className="inline-flex items-center gap-2 px-4 sm:px-6 py-2 bg-white/80 backdrop-blur-sm border border-rose-100 rounded-full shadow-sm mb-4 sm:mb-6">
               <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
-              <span className="text-primary font-bold text-sm uppercase tracking-widest">Our Philosophy</span>
+              <span className="text-primary font-bold text-xs sm:text-sm uppercase tracking-widest">Our Philosophy</span>
             </div>
-            <h2 className="text-5xl md:text-6xl font-serif font-bold text-gray-900 mb-8 leading-tight">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-gray-900 mb-6 sm:mb-8 leading-tight px-4">
               Why Choose <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-rose-400">Eunoia</span>?
             </h2>
-            <div className="flex items-center justify-center gap-2 mb-8">
-              <div className="h-1 w-16 bg-gradient-to-r from-transparent to-primary rounded-full"></div>
+            <div className="flex items-center justify-center gap-2 mb-6 sm:mb-8">
+              <div className="h-1 w-12 sm:w-16 bg-gradient-to-r from-transparent to-primary rounded-full"></div>
               <div className="h-2 w-2 bg-primary rounded-full"></div>
-              <div className="h-1 w-24 bg-gradient-to-r from-primary to-secondary rounded-full"></div>
+              <div className="h-1 w-16 sm:w-24 bg-gradient-to-r from-primary to-secondary rounded-full"></div>
               <div className="h-2 w-2 bg-secondary rounded-full"></div>
-              <div className="h-1 w-16 bg-gradient-to-r from-secondary to-transparent rounded-full"></div>
+              <div className="h-1 w-12 sm:w-16 bg-gradient-to-r from-secondary to-transparent rounded-full"></div>
             </div>
-            <p className="text-xl text-gray-600 leading-relaxed font-light">
+            <p className="text-base sm:text-lg lg:text-xl text-gray-600 leading-relaxed font-light px-4">
               We don't just treat symptoms; we treat the person. Our approach is holistic, gentle, and scientifically grounded.
             </p>
           </div>
 
-          {/* Premium Cards Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-14 max-w-7xl mx-auto">
-
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10 lg:gap-12">
             {/* Card 1: Root Cause Treatment */}
             <div className="group relative">
               <div className="absolute inset-0 bg-gradient-to-br from-rose-200/50 to-rose-100/30 rounded-[2.5rem] blur-xl group-hover:blur-2xl transition-all duration-500 opacity-0 group-hover:opacity-100"></div>
-              <div className="relative bg-white p-12 rounded-[2.5rem] shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 border-2 border-white hover:border-rose-100 overflow-hidden">
+              <div className="relative bg-white p-6 sm:p-8 lg:p-12 rounded-2xl sm:rounded-[2.5rem] shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 sm:hover:-translate-y-3 border-2 border-white hover:border-rose-100 overflow-hidden">
                 {/* Animated Corner Accent */}
                 <div className="absolute -top-12 -right-12 w-40 h-40 bg-gradient-to-br from-rose-100 to-rose-50 rounded-full opacity-50 group-hover:scale-150 transition-transform duration-700"></div>
 
                 {/* Icon Container */}
-                <div className="relative mb-8">
-                  <div className="w-20 h-20 bg-gradient-to-br from-rose-50 to-white rounded-3xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-500 group-hover:scale-110 group-hover:rotate-6 border border-rose-100">
-                    <Activity size={36} className="text-rose-600 group-hover:scale-110 transition-transform duration-500" />
+                <div className="relative mb-6 sm:mb-8">
+                  <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-rose-50 to-white rounded-2xl sm:rounded-3xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-500 group-hover:scale-110 group-hover:rotate-6 border border-rose-100">
+                    <Activity size={28} className="sm:w-9 sm:h-9 text-rose-600 group-hover:scale-110 transition-transform duration-500" />
                   </div>
                   {/* Decorative Ring */}
                   <div className="absolute -inset-2 border-2 border-rose-100 rounded-3xl opacity-0 group-hover:opacity-100 group-hover:scale-125 transition-all duration-500"></div>
@@ -169,14 +167,14 @@ const PatientPortal: React.FC = () => {
             {/* Card 2: Zero Side Effects */}
             <div className="group relative">
               <div className="absolute inset-0 bg-gradient-to-br from-green-200/50 to-green-100/30 rounded-[2.5rem] blur-xl group-hover:blur-2xl transition-all duration-500 opacity-0 group-hover:opacity-100"></div>
-              <div className="relative bg-white p-12 rounded-[2.5rem] shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 border-2 border-white hover:border-green-100 overflow-hidden">
+              <div className="relative bg-white p-6 sm:p-8 lg:p-12 rounded-2xl sm:rounded-[2.5rem] shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 sm:hover:-translate-y-3 border-2 border-white hover:border-green-100 overflow-hidden">
                 {/* Animated Corner Accent */}
                 <div className="absolute -top-12 -right-12 w-40 h-40 bg-gradient-to-br from-green-100 to-green-50 rounded-full opacity-50 group-hover:scale-150 transition-transform duration-700"></div>
 
                 {/* Icon Container */}
-                <div className="relative mb-8">
-                  <div className="w-20 h-20 bg-gradient-to-br from-green-50 to-white rounded-3xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-500 group-hover:scale-110 group-hover:rotate-6 border border-green-100">
-                    <ShieldCheck size={36} className="text-green-600 group-hover:scale-110 transition-transform duration-500" />
+                <div className="relative mb-6 sm:mb-8">
+                  <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-green-50 to-white rounded-2xl sm:rounded-3xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-500 group-hover:scale-110 group-hover:rotate-6 border border-green-100">
+                    <ShieldCheck size={28} className="sm:w-9 sm:h-9 text-green-600 group-hover:scale-110 transition-transform duration-500" />
                   </div>
                   {/* Decorative Ring */}
                   <div className="absolute -inset-2 border-2 border-green-100 rounded-3xl opacity-0 group-hover:opacity-100 group-hover:scale-125 transition-all duration-500"></div>
@@ -197,14 +195,14 @@ const PatientPortal: React.FC = () => {
             {/* Card 3: Personalized Care */}
             <div className="group relative">
               <div className="absolute inset-0 bg-gradient-to-br from-rose-200/50 to-rose-100/30 rounded-[2.5rem] blur-xl group-hover:blur-2xl transition-all duration-500 opacity-0 group-hover:opacity-100"></div>
-              <div className="relative bg-white p-12 rounded-[2.5rem] shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 border-2 border-white hover:border-rose-100 overflow-hidden">
+              <div className="relative bg-white p-6 sm:p-8 lg:p-12 rounded-2xl sm:rounded-[2.5rem] shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 sm:hover:-translate-y-3 border-2 border-white hover:border-rose-100 overflow-hidden">
                 {/* Animated Corner Accent */}
                 <div className="absolute -top-12 -right-12 w-40 h-40 bg-gradient-to-br from-rose-100 to-rose-50 rounded-full opacity-50 group-hover:scale-150 transition-transform duration-700"></div>
 
                 {/* Icon Container */}
-                <div className="relative mb-8">
-                  <div className="w-20 h-20 bg-gradient-to-br from-rose-50 to-white rounded-3xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-500 group-hover:scale-110 group-hover:rotate-6 border border-rose-100">
-                    <Heart size={36} className="text-rose-600 group-hover:scale-110 transition-transform duration-500" />
+                <div className="relative mb-6 sm:mb-8">
+                  <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-rose-50 to-white rounded-2xl sm:rounded-3xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-500 group-hover:scale-110 group-hover:rotate-6 border border-rose-100">
+                    <Heart size={28} className="sm:w-9 sm:h-9 text-rose-600 group-hover:scale-110 transition-transform duration-500" />
                   </div>
                   {/* Decorative Ring */}
                   <div className="absolute -inset-2 border-2 border-rose-100 rounded-3xl opacity-0 group-hover:opacity-100 group-hover:scale-125 transition-all duration-500"></div>
@@ -221,33 +219,32 @@ const PatientPortal: React.FC = () => {
                 <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-rose-400 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               </div>
             </div>
-
           </div>
         </div>
-      </section>
+      </section >
 
       {/* HEALTH CONDITIONS CAROUSEL */}
-      <HealthImagesCarousel />
+      < HealthImagesCarousel />
 
       {/* SERVICES SECTION */}
-      <section className="py-20 bg-gray-50" id="services">
+      < section className="py-20 bg-gray-50" id="services" >
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-end mb-12">
             <div className="max-w-xl">
-              <span className="text-primary font-bold text-sm uppercase tracking-wider mb-2 block">Our Expertise</span>
-              <h2 className="text-4xl font-serif font-bold text-gray-900">Know more about our specialised treatments</h2>
+              <span className="text-primary font-bold text-xs sm:text-sm uppercase tracking-wider mb-2 block">Our Expertise</span>
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif font-bold text-gray-900">Know more about our specialised treatments</h2>
             </div>
 
-            {/* Search */}
-            <div className="relative w-full md:w-72 mt-6 md:mt-0">
+            {/* Search - Mobile Optimized */}
+            <div className="relative w-full md:w-auto">
+              <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400" size={18} />
               <input
                 type="text"
-                placeholder="Search condition..."
+                placeholder="Search treatments..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-10 pr-4 py-3 rounded-full border border-gray-200 focus:border-primary focus:ring-1 focus:ring-primary outline-none text-sm"
+                className="w-full md:w-80 pl-11 pr-4 py-3.5 text-sm sm:text-base rounded-full border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
               />
-              <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" size={16} />
             </div>
           </div>
 
@@ -263,10 +260,10 @@ const PatientPortal: React.FC = () => {
             )}
           </div>
         </div>
-      </section>
+      </section >
 
       {/* TESTIMONIALS */}
-      <section className="py-20 bg-white border-t border-gray-100">
+      < section className="py-20 bg-white border-t border-gray-100" >
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-serif font-bold text-center text-gray-900 mb-16">Success Stories</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -287,10 +284,10 @@ const PatientPortal: React.FC = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section >
 
       {/* FAQ Accordion */}
-      <section className="py-20 bg-white">
+      < section className="py-20 bg-white" >
         <div className="container mx-auto px-4 max-w-3xl">
           <h2 className="text-3xl font-serif font-bold text-center text-gray-900 mb-12">Frequently Asked Questions</h2>
           <div className="space-y-4">
@@ -309,20 +306,20 @@ const PatientPortal: React.FC = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section >
 
       {/* CTA Bottom */}
-      <section className="py-20 bg-rose-50 text-center">
+      < section className="py-20 bg-rose-50 text-center" >
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-6">Ready to restore your health?</h2>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-gray-900 mb-6 sm:mb-8 leading-tight px-4">Ready to restore your health?</h2>
           <p className="text-gray-600 mb-8 max-w-xl mx-auto">Book a consultation today and start your journey towards a healthier, happier life.</p>
           <Link to="/book-appointment" className="inline-block bg-primary text-white px-10 py-4 rounded-full font-bold shadow-xl hover:bg-rose-700 transition-all transform hover:-translate-y-1">
             Book Appointment Now
           </Link>
         </div>
-      </section>
+      </section >
 
-    </main>
+    </main >
   );
 };
 
