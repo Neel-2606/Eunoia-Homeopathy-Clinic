@@ -1,6 +1,6 @@
-import { 
-  Wind, Smile, User, Utensils, Activity, 
-  Zap, Droplets, Heart, Baby, Brain, 
+import {
+  Wind, Smile, User, Utensils, Activity,
+  Zap, Droplets, Heart, Baby, Brain,
   Thermometer, Monitor, Microscope, Truck
 } from 'lucide-react';
 import { ServiceCategory, FaqItem, Seminar, CaseStudy, ContactDetails, Testimonial } from './types';
@@ -19,87 +19,378 @@ export const CONTACT_INFO: ContactDetails = {
 export const SERVICES: ServiceCategory[] = [
   {
     id: 'respiratory',
-    title: 'Respiratory',
+    title: 'Advanced Respiratory Care',
     description: 'Natural relief for chronic asthma and allergies without steroids.',
     icon: Wind,
-    details: ['Asthma', 'Allergic Rhinitis', 'Sinusitis', 'Bronchitis', 'Pneumonia']
+    details: ['Asthma', 'Allergic Rhinitis', 'Sinusitis', 'Bronchitis', 'Pneumonia'],
+    imageUrl: '/Client images/RESPIRATORY DISORDERS.jpg',
+    fullContent: {
+      overview: "Respiratory disorders affect the airways and lungs, leading to difficulty in breathing, frequent infections, and reduced quality of life. These conditions may be seasonal or chronic and are often triggered by allergies, pollution, weather changes, or weak immunity. Many patients become dependent on inhalers or frequent medications, which only provide temporary relief.\n\nHomeopathy focuses on strengthening the respiratory system and immune response, offering long-term improvement rather than short-term suppression.",
+      symptoms: [
+        "Shortness of breath",
+        "Wheezing or whistling sound while breathing",
+        "Chronic cough",
+        "Chest tightness",
+        "Nasal blockage or runny nose",
+        "Recurrent respiratory infections"
+      ],
+      causes: [
+        "Air pollution and dust exposure",
+        "Allergens such as pollen or mites",
+        "Cold weather and humidity",
+        "Stress and anxiety",
+        "Weak immune system"
+      ],
+      approach: "Homeopathic treatment addresses the root cause of respiratory sensitivity. Medicines are selected based on individual symptoms, triggers, and overall health. The goal is to reduce frequency and intensity of attacks while improving lung strength.",
+      benefits: [
+        "Reduced dependency on inhalers",
+        "Improved breathing capacity",
+        "Strengthened immunity",
+        "Safe for children and elderly"
+      ],
+      whoShouldConsult: [
+        "Patients with chronic asthma or allergies",
+        "Children with recurrent cough and cold",
+        "Individuals dependent on long-term medications"
+      ]
+    }
   },
   {
     id: 'skin',
-    title: 'Skin Conditions',
+    title: 'Clinical Dermatology & Skincare',
     description: 'Deep healing for eczema, psoriasis, and persistent infections.',
     icon: Smile,
-    details: ['Eczema', 'Psoriasis', 'Acne', 'Warts', 'Fungal Infection']
+    details: ['Eczema', 'Psoriasis', 'Acne', 'Warts', 'Fungal Infection'],
+    imageUrl: '/Client images/SKIN CONDITIONS.jpg',
+    fullContent: {
+      overview: "Skin conditions are often external manifestations of internal imbalance. Chronic skin problems can significantly affect confidence and mental well-being. Conventional treatments often rely on steroids or topical creams that suppress symptoms temporarily.\n\nHomeopathy treats skin diseases from within by addressing immunity, digestion, and hormonal balance.",
+      symptoms: [
+        "Persistent itching",
+        "Redness and inflammation",
+        "Dry, scaly, or cracked skin",
+        "Pimples, scars, or pigmentation",
+        "Recurrent fungal infections"
+      ],
+      causes: [
+        "Immune system imbalance",
+        "Hormonal disturbances",
+        "Stress and anxiety",
+        "Digestive disorders",
+        "Genetic tendency"
+      ],
+      approach: "Treatment is individualized and focuses on long-term healing rather than quick suppression. Medicines are gentle and safe for prolonged use.",
+      benefits: [
+        "Gradual and permanent improvement",
+        "No steroids or harsh chemicals",
+        "Reduced recurrence",
+        "Improved skin texture"
+      ],
+      whoShouldConsult: [
+        "Patients with chronic or recurrent skin problems",
+        "Individuals seeking steroid-free treatment"
+      ]
+    }
   },
   {
     id: 'hair',
-    title: 'Hair Rejuvenation',
+    title: 'Trichology & Hair Restoration',
     description: 'Targeting root causes of hair fall and alopecia naturally.',
     icon: User,
-    details: ['Hair-fall', 'Alopecia']
+    details: ['Hair-fall', 'Alopecia'],
+    imageUrl: '/Client images/HAIR REJUVENATION.jpg',
+    fullContent: {
+      overview: "Hair problems are commonly linked to stress, hormonal imbalance, nutritional deficiencies, and genetic factors. Sudden hair fall or patchy hair loss can be emotionally distressing.\n\nHomeopathy strengthens hair roots and improves scalp health naturally.",
+      symptoms: [
+        "Excessive hair fall",
+        "Thinning of hair",
+        "Patchy hair loss",
+        "Dandruff and itchy scalp"
+      ],
+      causes: [
+        "Hormonal imbalance",
+        "Stress and lifestyle issues",
+        "Poor nutrition",
+        "Hereditary factors"
+      ],
+      approach: "Medicines stimulate hair follicles, improve blood circulation to the scalp, and correct internal imbalances responsible for hair loss.",
+      benefits: [
+        "Reduced hair fall",
+        "Improved hair density",
+        "Stronger roots",
+        "Safe and natural"
+      ]
+    }
   },
   {
     id: 'digestive',
-    title: 'Digestive Health',
+    title: 'Gastroenterology & Gut Health',
     description: 'Gentle correction for IBS, acidity, and chronic indigestion.',
     icon: Utensils,
-    details: ['Indigestion', 'Acidity', 'IBS', 'Ulcers', 'Piles', 'Fissures']
+    details: ['Indigestion', 'Acidity', 'IBS', 'Ulcers', 'Piles', 'Fissures'],
+    imageUrl: '/Client images/DIGESTIVE HEALTH.jpg',
+    fullContent: {
+      overview: "Digestive health plays a vital role in overall well-being. Chronic digestive problems can affect energy levels, immunity, and mental health. Suppressive medications often provide temporary relief.\n\nHomeopathy corrects digestive imbalance by improving gut sensitivity and metabolism.",
+      symptoms: [
+        "Acidity and heartburn",
+        "Gas and bloating",
+        "Irregular bowel movements",
+        "Abdominal pain",
+        "Rectal discomfort"
+      ],
+      causes: [
+        "Poor eating habits",
+        "Stress",
+        "Sedentary lifestyle",
+        "Food intolerance"
+      ],
+      approach: "Focuses on restoring digestive balance and improving gut function naturally.",
+      benefits: [
+        "Improved digestion",
+        "Regular bowel habits",
+        "Long-term relief",
+        "No dependency on laxatives"
+      ]
+    }
   },
   {
     id: 'musculo',
-    title: 'Musculoskeletal',
+    title: 'Orthopedic & Joint Wellness',
     description: 'Pain management and mobility restoration for joints and bones.',
     icon: Activity,
-    details: ['Arthritis', 'Joint pain', 'Sprains', 'Gout']
+    details: ['Arthritis', 'Joint pain', 'Sprains', 'Gout'],
+    imageUrl: '/Client images/MUSCULOSKELETAL DISORDERS.jpg',
+    fullContent: {
+      overview: "Musculoskeletal disorders cause pain, stiffness, and reduced mobility. These conditions may be age-related or due to injury, inflammation, or lifestyle factors.\n\nHomeopathy reduces inflammation and improves joint flexibility without painkillers.",
+      symptoms: [
+        "Joint pain and stiffness",
+        "Swelling",
+        "Difficulty in movement",
+        "Muscle soreness"
+      ],
+      causes: [
+        "Age-related degeneration",
+        "Inflammation",
+        "Injury or trauma",
+        "Lifestyle factors"
+      ],
+      approach: "Homeopathy helps to reduce inflammation, repair tissues, and improve joint flexibility naturally.",
+      benefits: [
+        "Natural pain relief",
+        "Improved mobility",
+        "Slowed disease progression",
+        "No gastric side effects"
+      ]
+    }
   },
   {
     id: 'nerve',
-    title: 'Nerve Disorders',
+    title: 'Neurological Disorders & Pain Management',
     description: 'Soothing relief for sciatica and nerve-related neuralgia.',
     icon: Zap,
-    details: ['Sciatica', 'Neuralgia']
+    details: ['Sciatica', 'Neuralgia'],
+    imageUrl: '/Client images/NERVE DISORDERS.jpg',
+    fullContent: {
+      overview: "Nerve-related pain can be sharp, shooting, or burning in nature. It often interferes with daily activities and sleep.\n\nHomeopathy helps calm irritated nerves and promotes healing.",
+      symptoms: [
+        "Shooting or burning pain",
+        "Tingling or numbness",
+        "Muscle weakness",
+        "Sensitivity to touch"
+      ],
+      causes: [
+        "Compression of nerves",
+        "Diabetes (Neuropathy)",
+        "Injury or trauma",
+        "Viral infections (e.g., Herpes Zoster)"
+      ],
+      approach: "Homeopathic medicines help to soothe inflamed nerves and restore normal nerve function without sedation.",
+      benefits: [
+        "Reduced nerve pain",
+        "Improved nerve function",
+        "Non-sedative treatment",
+        "Holistic healing"
+      ]
+    }
   },
   {
     id: 'urinary',
-    title: 'Urinary Health',
+    title: 'Urology & Renal Health',
     description: 'Effective resolution for recurrent infections and stones.',
     icon: Droplets,
-    details: ['Infections', 'Stones']
+    details: ['Infections', 'Stones'],
+    imageUrl: '/Client images/URINARY HEALTH.jpg',
+    fullContent: {
+      overview: "Urinary problems can be painful and recurrent. Frequent infections or stones may severely affect daily comfort.\n\nHomeopathy helps treat infections and prevents recurrence.",
+      symptoms: [
+        "Burning sensation while urinating",
+        "Frequent urge to urinate",
+        "Pain in lower abdomen or back",
+        "Cloudy or bloody urine"
+      ],
+      causes: [
+        "Bacterial infections",
+        "Dehydration",
+        "Kidney stones",
+        "Structural issues"
+      ],
+      approach: "Homeopathy strengthens the urinary tract's defense mechanisms and helps dissolve small stones naturally.",
+      benefits: [
+        "Reduced burning and pain",
+        "Prevention of recurrence",
+        "Supports kidney function",
+        "Avoids antibiotic resistance"
+      ]
+    }
   },
   {
     id: 'women',
-    title: "Women's Health",
+    title: "Gynecology & Hormonal Balance",
     description: 'Hormonal balance for PCOS, menopause, and menstrual health.',
     icon: Heart,
-    details: ['PCOS', 'Irregular periods', 'Menopause', 'Leucorrhea']
+    details: ['PCOS', 'Irregular periods', 'Menopause', 'Leucorrhea'],
+    imageUrl: "/Client images/WOMEN’S HEALTH.jpg",
+    fullContent: {
+      overview: "Women’s health issues are often related to hormonal imbalance and stress. These conditions affect physical, emotional, and reproductive health.\n\nHomeopathy helps restore hormonal balance gently.",
+      symptoms: [
+        "Irregular or painful periods",
+        "Mood swings and irritability",
+        "Hot flashes (Menopause)",
+        "Unwanted hair growth (PCOS)",
+        "Fatigue"
+      ],
+      causes: [
+        "Hormonal imbalance",
+        "Stress",
+        "Lifestyle & Diet",
+        "Genetic factors"
+      ],
+      approach: "Homeopathy works on the endocrine system to regulate hormones naturally without external hormone replacement.",
+      benefits: [
+        "Regular menstrual cycles",
+        "Reduced hormonal symptoms",
+        "Improved fertility support",
+        "Emotional stability"
+      ]
+    }
   },
   {
     id: 'children',
-    title: 'Child Care',
+    title: 'Pediatric Care & Immunity',
     description: 'Safe, sweet pills for immunity, behavior, and growth.',
     icon: Baby,
-    details: ['Behavioral issues', 'Common illnesses']
+    details: ['Behavioral issues', 'Common illnesses'],
+    imageUrl: '/Client images/CHILD CARE.jpg',
+    fullContent: {
+      overview: "Children require gentle and safe treatment. Homeopathy is ideal for building immunity and supporting healthy development without harsh side effects.",
+      symptoms: [
+        "Frequent colds and coughs",
+        "Behavioral tantrums",
+        "Bedwetting",
+        "Poor appetite or growth issues"
+      ],
+      causes: [
+        "Developing immune system",
+        "Environmental factors",
+        "Emotional stress",
+        "Dietary gaps"
+      ],
+      approach: "Simple, sweet pills that children love to take. The constitutional remedy enhances the child's own fighting mechanism.",
+      benefits: [
+        "Improved immunity",
+        "Reduced recurrent infections",
+        "Safe and non-habit forming",
+        "Supports mental & physical growth"
+      ]
+    }
   },
   {
     id: 'mental',
-    title: 'Mental Wellness',
+    title: 'Psychology & Emotional Wellness',
     description: 'Holistic support for anxiety, depression, and stress management.',
     icon: Brain,
-    details: ['Anxiety', 'Depression', 'Stress Management']
+    details: ['Anxiety', 'Depression', 'Stress Management'],
+    imageUrl: '/Client images/MENTAL WELLNESS.jpg',
+    fullContent: {
+      overview: "Mental health is as important as physical health. Stress and emotional imbalance can affect sleep, appetite, and productivity.\n\nHomeopathy treats emotional well-being holistically.",
+      symptoms: [
+        "Excessive worry or fear",
+        "Low mood or irritability",
+        "Sleep disturbances",
+        "Fatigue and lack of focus"
+      ],
+      causes: [
+        "Chronic stress",
+        "Trauma or grief",
+        "Chemical imbalance",
+        "Lifestyle factors"
+      ],
+      approach: "Homeopathy considers the mind and body as one. Medicines help restore emotional balance and resilience.",
+      benefits: [
+        "Emotional stability",
+        "Improved sleep",
+        "Better stress management",
+        "Non-addictive treatment"
+      ]
+    }
   },
   {
     id: 'lifestyle',
-    title: 'Lifestyle Diseases',
+    title: 'Metabolic & Lifestyle Management',
     description: 'Constitutional management of diabetes, BP, and thyroid issues.',
     icon: Activity,
-    details: ['Diabetes', 'Hypertension', 'Thyroid (Hypo/Hyper)']
+    details: ['Diabetes', 'Hypertension', 'Thyroid (Hypo/Hyper)'],
+    imageUrl: '/Client images/LIFESTYLE DISEASES.jpg',
+    fullContent: {
+      overview: "Lifestyle diseases require long-term management. Homeopathy supports metabolic balance and overall health along with lifestyle modifications.",
+      symptoms: [
+        "Fluctuating blood pressure",
+        "Uncontrolled blood sugar",
+        "Weight gain or loss (Thyroid)",
+        "Fatigue"
+      ],
+      causes: [
+        "Sedentary lifestyle",
+        "Unhealthy diet",
+        "Stress",
+        "Genetic predisposition"
+      ],
+      approach: "Constitutional treatment helps regularize metabolic functions and reduces the severity of the disease.",
+      benefits: [
+        "Better disease control",
+        "Improved energy levels",
+        "Supports conventional care",
+        "Prevents complications"
+      ]
+    }
   },
   {
     id: 'acute',
-    title: 'Acute Illness',
+    title: 'Acute Infection & Viral Care',
     description: 'Rapid recovery from seasonal flu, fevers, and colds.',
     icon: Thermometer,
-    details: ['Cold', 'Cough', 'Fever', 'Flu']
+    details: ['Cold', 'Cough', 'Fever', 'Flu'],
+    imageUrl: '/Client images/ACUTE ILLNESS.jpg',
+    fullContent: {
+      overview: "Acute illnesses are common and usually seasonal. Proper homeopathic care helps faster recovery without antibiotics or suppression.",
+      symptoms: [
+        "Fever",
+        "Runny nose",
+        "Sore throat",
+        "Body ache"
+      ],
+      causes: [
+        "Viral or bacterial infection",
+        "Weather complications",
+        "Exposure to sick individuals"
+      ],
+      approach: "Short-acting remedies that match the acute symptoms to boost the body's immediate immune response.",
+      benefits: [
+        "Quick symptom relief",
+        "Reduced recurrence",
+        "Safe for all ages",
+        "Prevents post-viral weakness"
+      ]
+    }
   }
 ];
 

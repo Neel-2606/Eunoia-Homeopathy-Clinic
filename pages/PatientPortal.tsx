@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Search, MapPin, Calendar, Activity, ArrowRight, ShieldCheck, Star, Heart } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { SERVICES, FAQS, FACILITIES, CONTACT_INFO, TESTIMONIALS } from '../constants';
-import ServiceCard from '../components/ServiceCard';
+import TreatmentCard from '../components/TreatmentCard';
 import HealthImagesCarousel from '../components/HealthImagesCarousel';
 
 const PatientPortal: React.FC = () => {
@@ -100,37 +100,127 @@ const PatientPortal: React.FC = () => {
         </div>
       </section>
 
-      {/* WHY CHOOSE US: Feature Grid */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center max-w-2xl mx-auto mb-16">
-            <h2 className="text-3xl font-serif font-bold text-gray-900 mb-4">Why Choose Eunoia?</h2>
-            <div className="h-1 w-20 bg-primary mx-auto rounded-full mb-4"></div>
-            <p className="text-gray-500">We don't just treat symptoms; we treat the person. Our approach is holistic, gentle, and scientifically grounded.</p>
+      {/* WHY CHOOSE US: Ultra Premium Medical Design */}
+      <section className="py-32 bg-gradient-to-b from-white via-rose-50/30 to-white relative overflow-hidden">
+        {/* Enhanced Decorative Elements */}
+        <div className="absolute top-20 left-10 w-96 h-96 bg-gradient-to-br from-rose-100/40 to-green-100/40 rounded-full mix-blend-multiply filter blur-3xl opacity-60 animate-pulse"></div>
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-gradient-to-tl from-green-100/40 to-rose-100/40 rounded-full mix-blend-multiply filter blur-3xl opacity-60 animate-pulse" style={{ animationDelay: '1s' }}></div>
+
+        {/* Floating Medical Icons Background */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute top-1/4 left-1/4 text-primary"><Activity size={80} /></div>
+          <div className="absolute bottom-1/3 right-1/4 text-secondary"><ShieldCheck size={80} /></div>
+        </div>
+
+        <div className="container mx-auto px-4 relative z-10">
+          {/* Enhanced Header */}
+          <div className="text-center max-w-3xl mx-auto mb-24">
+            <div className="inline-flex items-center gap-2 px-6 py-2 bg-white/80 backdrop-blur-sm border border-rose-100 rounded-full shadow-sm mb-6">
+              <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
+              <span className="text-primary font-bold text-sm uppercase tracking-widest">Our Philosophy</span>
+            </div>
+            <h2 className="text-5xl md:text-6xl font-serif font-bold text-gray-900 mb-8 leading-tight">
+              Why Choose <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-rose-400">Eunoia</span>?
+            </h2>
+            <div className="flex items-center justify-center gap-2 mb-8">
+              <div className="h-1 w-16 bg-gradient-to-r from-transparent to-primary rounded-full"></div>
+              <div className="h-2 w-2 bg-primary rounded-full"></div>
+              <div className="h-1 w-24 bg-gradient-to-r from-primary to-secondary rounded-full"></div>
+              <div className="h-2 w-2 bg-secondary rounded-full"></div>
+              <div className="h-1 w-16 bg-gradient-to-r from-secondary to-transparent rounded-full"></div>
+            </div>
+            <p className="text-xl text-gray-600 leading-relaxed font-light">
+              We don't just treat symptoms; we treat the person. Our approach is holistic, gentle, and scientifically grounded.
+            </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="p-8 rounded-2xl bg-neutral hover:bg-white hover:shadow-xl transition-all border border-transparent hover:border-gray-100 group">
-              <div className="w-14 h-14 bg-white rounded-xl shadow-sm flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
-                <Activity size={28} />
+          {/* Premium Cards Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-14 max-w-7xl mx-auto">
+
+            {/* Card 1: Root Cause Treatment */}
+            <div className="group relative">
+              <div className="absolute inset-0 bg-gradient-to-br from-rose-200/50 to-rose-100/30 rounded-[2.5rem] blur-xl group-hover:blur-2xl transition-all duration-500 opacity-0 group-hover:opacity-100"></div>
+              <div className="relative bg-white p-12 rounded-[2.5rem] shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 border-2 border-white hover:border-rose-100 overflow-hidden">
+                {/* Animated Corner Accent */}
+                <div className="absolute -top-12 -right-12 w-40 h-40 bg-gradient-to-br from-rose-100 to-rose-50 rounded-full opacity-50 group-hover:scale-150 transition-transform duration-700"></div>
+
+                {/* Icon Container */}
+                <div className="relative mb-8">
+                  <div className="w-20 h-20 bg-gradient-to-br from-rose-50 to-white rounded-3xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-500 group-hover:scale-110 group-hover:rotate-6 border border-rose-100">
+                    <Activity size={36} className="text-rose-600 group-hover:scale-110 transition-transform duration-500" />
+                  </div>
+                  {/* Decorative Ring */}
+                  <div className="absolute -inset-2 border-2 border-rose-100 rounded-3xl opacity-0 group-hover:opacity-100 group-hover:scale-125 transition-all duration-500"></div>
+                </div>
+
+                <h3 className="text-2xl font-serif font-bold text-gray-900 mb-5 group-hover:text-rose-700 transition-colors duration-300">
+                  Root Cause Treatment
+                </h3>
+                <p className="text-gray-600 leading-relaxed text-base">
+                  We analyze your genetic history, lifestyle, and emotional state to find the constitutional remedy that uproots the disease.
+                </p>
+
+                {/* Bottom Accent Line */}
+                <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-rose-400 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Root Cause Treatment</h3>
-              <p className="text-gray-600 leading-relaxed text-sm">We analyze your genetic history, lifestyle, and emotional state to find the constitutional remedy that uproots the disease.</p>
             </div>
-            <div className="p-8 rounded-2xl bg-neutral hover:bg-white hover:shadow-xl transition-all border border-transparent hover:border-gray-100 group">
-              <div className="w-14 h-14 bg-white rounded-xl shadow-sm flex items-center justify-center text-secondary mb-6 group-hover:scale-110 transition-transform">
-                <ShieldCheck size={28} />
+
+            {/* Card 2: Zero Side Effects */}
+            <div className="group relative">
+              <div className="absolute inset-0 bg-gradient-to-br from-green-200/50 to-green-100/30 rounded-[2.5rem] blur-xl group-hover:blur-2xl transition-all duration-500 opacity-0 group-hover:opacity-100"></div>
+              <div className="relative bg-white p-12 rounded-[2.5rem] shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 border-2 border-white hover:border-green-100 overflow-hidden">
+                {/* Animated Corner Accent */}
+                <div className="absolute -top-12 -right-12 w-40 h-40 bg-gradient-to-br from-green-100 to-green-50 rounded-full opacity-50 group-hover:scale-150 transition-transform duration-700"></div>
+
+                {/* Icon Container */}
+                <div className="relative mb-8">
+                  <div className="w-20 h-20 bg-gradient-to-br from-green-50 to-white rounded-3xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-500 group-hover:scale-110 group-hover:rotate-6 border border-green-100">
+                    <ShieldCheck size={36} className="text-green-600 group-hover:scale-110 transition-transform duration-500" />
+                  </div>
+                  {/* Decorative Ring */}
+                  <div className="absolute -inset-2 border-2 border-green-100 rounded-3xl opacity-0 group-hover:opacity-100 group-hover:scale-125 transition-all duration-500"></div>
+                </div>
+
+                <h3 className="text-2xl font-serif font-bold text-gray-900 mb-5 group-hover:text-green-700 transition-colors duration-300">
+                  Zero Side Effects
+                </h3>
+                <p className="text-gray-600 leading-relaxed text-base">
+                  Safe for infants, pregnant women, and the elderly. Our medicines are non-toxic, non-addictive, and steroid-free.
+                </p>
+
+                {/* Bottom Accent Line */}
+                <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-green-400 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Zero Side Effects</h3>
-              <p className="text-gray-600 leading-relaxed text-sm">Safe for infants, pregnant women, and the elderly. Our medicines are non-toxic, non-addictive, and steroid-free.</p>
             </div>
-            <div className="p-8 rounded-2xl bg-neutral hover:bg-white hover:shadow-xl transition-all border border-transparent hover:border-gray-100 group">
-              <div className="w-14 h-14 bg-white rounded-xl shadow-sm flex items-center justify-center text-blue-600 mb-6 group-hover:scale-110 transition-transform">
-                <Heart size={28} />
+
+            {/* Card 3: Personalized Care */}
+            <div className="group relative">
+              <div className="absolute inset-0 bg-gradient-to-br from-rose-200/50 to-rose-100/30 rounded-[2.5rem] blur-xl group-hover:blur-2xl transition-all duration-500 opacity-0 group-hover:opacity-100"></div>
+              <div className="relative bg-white p-12 rounded-[2.5rem] shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 border-2 border-white hover:border-rose-100 overflow-hidden">
+                {/* Animated Corner Accent */}
+                <div className="absolute -top-12 -right-12 w-40 h-40 bg-gradient-to-br from-rose-100 to-rose-50 rounded-full opacity-50 group-hover:scale-150 transition-transform duration-700"></div>
+
+                {/* Icon Container */}
+                <div className="relative mb-8">
+                  <div className="w-20 h-20 bg-gradient-to-br from-rose-50 to-white rounded-3xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-500 group-hover:scale-110 group-hover:rotate-6 border border-rose-100">
+                    <Heart size={36} className="text-rose-600 group-hover:scale-110 transition-transform duration-500" />
+                  </div>
+                  {/* Decorative Ring */}
+                  <div className="absolute -inset-2 border-2 border-rose-100 rounded-3xl opacity-0 group-hover:opacity-100 group-hover:scale-125 transition-all duration-500"></div>
+                </div>
+
+                <h3 className="text-2xl font-serif font-bold text-gray-900 mb-5 group-hover:text-rose-700 transition-colors duration-300">
+                  Personalized Care
+                </h3>
+                <p className="text-gray-600 leading-relaxed text-base">
+                  Dr. Hetal personally dedicates time to listen to your story. No rushed appointments, just compassionate healing.
+                </p>
+
+                {/* Bottom Accent Line */}
+                <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-rose-400 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Personalized Care</h3>
-              <p className="text-gray-600 leading-relaxed text-sm">Dr. Hetal personally dedicates time to listen to your story. No rushed appointments, just compassionate healing.</p>
             </div>
+
           </div>
         </div>
       </section>
@@ -144,7 +234,7 @@ const PatientPortal: React.FC = () => {
           <div className="flex flex-col md:flex-row justify-between items-end mb-12">
             <div className="max-w-xl">
               <span className="text-primary font-bold text-sm uppercase tracking-wider mb-2 block">Our Expertise</span>
-              <h2 className="text-4xl font-serif font-bold text-gray-900">Specialized Treatments</h2>
+              <h2 className="text-4xl font-serif font-bold text-gray-900">Know more about our specialised treatments</h2>
             </div>
 
             {/* Search */}
@@ -160,10 +250,10 @@ const PatientPortal: React.FC = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredServices.length > 0 ? (
               filteredServices.map(service => (
-                <ServiceCard key={service.id} service={service} />
+                <TreatmentCard key={service.id} service={service} />
               ))
             ) : (
               <div className="col-span-full text-center py-12">

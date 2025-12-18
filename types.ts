@@ -1,11 +1,22 @@
 import { LucideIcon } from 'lucide-react';
 
+export interface DetailedServiceContent {
+  overview: string;
+  symptoms: string[];
+  causes: string[];
+  approach: string;
+  benefits: string[];
+  whoShouldConsult?: string[]; // Optional as not all have it
+}
+
 export interface ServiceCategory {
   id: string;
   title: string;
   description: string; // The "Tooltip" or short description
   icon: LucideIcon;
   details: string[]; // List of specific ailments (e.g., Asthma, Acne)
+  imageUrl?: string; // Image for treatment card display
+  fullContent?: DetailedServiceContent; // For the detailed page
 }
 
 export interface FaqItem {
