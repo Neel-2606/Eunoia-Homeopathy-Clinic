@@ -47,6 +47,8 @@ export interface ContactDetails {
   timings: string;
   mapLink: string;
   whatsappLink: string;
+  instagramLink?: string;
+  facebookLink?: string;
 }
 
 export interface Testimonial {

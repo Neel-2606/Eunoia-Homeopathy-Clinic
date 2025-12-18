@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { MapPin, Phone, Mail, Clock, Send, CheckCircle, Facebook, Instagram, Twitter, Linkedin } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, Send, CheckCircle, Facebook, Instagram } from 'lucide-react';
 import { CONTACT_INFO } from '../constants';
 
 const ContactPage: React.FC = () => {
@@ -80,7 +80,18 @@ const ContactPage: React.FC = () => {
                   </div>
                   <div className="flex-1">
                     <h4 className="font-bold text-gray-900 mb-2 text-lg">{item.title}</h4>
-                    <p className="text-gray-600 text-sm leading-relaxed">{item.content}</p>
+                    {item.title === 'Visit Us' ? (
+                      <a
+                        href={CONTACT_INFO.mapLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-gray-600 text-sm leading-relaxed hover:text-rose-500 transition-colors block"
+                      >
+                        {item.content}
+                      </a>
+                    ) : (
+                      <p className="text-gray-600 text-sm leading-relaxed">{item.content}</p>
+                    )}
                   </div>
                 </div>
               </div>
@@ -91,19 +102,24 @@ const ContactPage: React.FC = () => {
               <h4 className="text-white font-bold text-lg mb-4">Follow Us</h4>
               <p className="text-gray-400 text-sm mb-6">Stay updated with health tips and wellness insights</p>
               <div className="flex gap-3">
-                {[
-                  { icon: Facebook, color: 'hover:bg-blue-600' },
-                  { icon: Instagram, color: 'hover:bg-pink-600' },
-                  { icon: Twitter, color: 'hover:bg-sky-500' },
-                  { icon: Linkedin, color: 'hover:bg-blue-700' }
-                ].map((social, idx) => (
-                  <button
-                    key={idx}
-                    className={`p-3 bg-gray-700 rounded-lg ${social.color} transition-all duration-300 transform hover:scale-110 hover:shadow-lg`}
-                  >
-                    <social.icon className="text-white" size={20} />
-                  </button>
-                ))}
+                <a
+                  href={CONTACT_INFO.facebookLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-3 bg-gray-700 rounded-lg hover:bg-blue-600 transition-all duration-300 transform hover:scale-110 hover:shadow-lg"
+                  aria-label="Facebook"
+                >
+                  <Facebook className="text-white" size={20} />
+                </a>
+                <a
+                  href={CONTACT_INFO.instagramLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-3 bg-gray-700 rounded-lg hover:bg-pink-600 transition-all duration-300 transform hover:scale-110 hover:shadow-lg"
+                  aria-label="Instagram"
+                >
+                  <Instagram className="text-white" size={20} />
+                </a>
               </div>
             </div>
           </div>
