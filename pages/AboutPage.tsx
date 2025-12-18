@@ -4,16 +4,8 @@ import { Activity, ShieldCheck } from 'lucide-react';
 const AboutPage: React.FC = () => {
     return (
         <main className="flex-grow">
-            {/* Hero Section */}
-            <section className="bg-rose-50 py-16 md:py-24">
-                <div className="container mx-auto px-4 text-center">
-                    <h1 className="text-4xl md:text-5xl font-serif font-bold text-gray-900 mb-6">About Us</h1>
-                    <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                        Experience the power of holistic healing under the expert guidance of Dr. Hetal Pandav.
-                    </p>
-                </div>
-            </section>
-
+            
+           
             {/* Meet Dr. Hetal Section */}
             <section className="py-20 bg-white">
                 <div className="container mx-auto px-4">
