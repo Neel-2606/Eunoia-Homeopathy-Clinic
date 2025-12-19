@@ -46,8 +46,8 @@ const Navbar: React.FC = () => {
 
           {/* Logo Section */}
           <Link to="/" className="flex items-center gap-3 group">
-            <div className="relative w-12 h-12 md:w-14 md:h-14 flex items-center justify-center bg-rose-50 rounded-full border border-primary/20 overflow-hidden group-hover:shadow-md transition-all">
-              <img src="https://picsum.photos/seed/lotuslogo/100/100" alt="Lotus Logo" className="object-cover w-full h-full opacity-90" />
+            <div className="relative w-16 h-16 md:w-20 md:h-20 flex items-center justify-center bg-rose-50 rounded-full border border-primary/20 overflow-hidden group-hover:shadow-md transition-all">
+              <img src="/logo.jpg" alt="Lotus Logo" className="object-cover w-full h-full opacity-90" />
             </div>
             <div className="flex flex-col">
               <h1 className="text-xl md:text-2xl font-serif font-bold text-gray-800 leading-tight group-hover:text-primary transition-colors">

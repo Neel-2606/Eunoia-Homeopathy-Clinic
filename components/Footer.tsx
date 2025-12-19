@@ -11,6 +11,9 @@ const Footer: React.FC = () => {
 
           {/* Brand Column */}
           <div>
+            <div className="mb-4">
+              <img src="/logo.jpg" alt="Eunoia Homoeopathy Logo" className="w-16 h-16 rounded-full object-cover border-2 border-primary/20" />
+            </div>
             <h3 className="text-xl font-serif font-bold mb-4 text-primary">Eunoia Homoeopathy</h3>
             <p className="text-gray-400 text-sm mb-6 leading-relaxed">
               Restoring the Healer Within through classical constitutional homeopathy.
