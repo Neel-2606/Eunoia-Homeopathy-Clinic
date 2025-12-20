@@ -11,9 +11,12 @@ export const CONTACT_INFO: ContactDetails = {
   email: "hetalpandav712@gmail.com",
   timings: "Monday to Saturday, 5:30 PM to 8:30 PM",
   // Google Maps Search Link based on address
-  mapLink: "https://www.google.com/maps/search/?api=1&query=Sharanam+Complex+Gotri+Vadodara",
+  mapLink: "https://maps.app.goo.gl/dui8wiVw7eayJHnN8",
   // WhatsApp API link
-  whatsappLink: "https://wa.me/918141327947?text=Hello%20Dr.%20Hetal,%20I%20would%20like%20to%20book%20an%20appointment."
+  whatsappLink: "https://wa.me/918141327947?text=Hello%20Dr.%20Hetal,%20I%20would%20like%20to%20book%20an%20appointment.",
+  // Social Media Links
+  instagramLink: "https://www.instagram.com/dr.hetalpandav?igsh=OGlkaWVyYXNjdG9m",
+  facebookLink: "https://www.facebook.com/share/1Boy67Q6vq/"
 };
 
 export const SERVICES: ServiceCategory[] = [

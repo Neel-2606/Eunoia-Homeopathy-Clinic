@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink, Link, useLocation } from 'react-router-dom';
-import { Menu, X, MapPin, Calendar, Phone } from 'lucide-react';
+import { Menu, X, MapPin, Calendar, Phone, Instagram, Facebook } from 'lucide-react';
 import { CONTACT_INFO } from '../constants';
 
 const Navbar: React.FC = () => {
@@ -17,19 +17,27 @@ const Navbar: React.FC = () => {
   return (
     <header className="bg-white shadow-md sticky top-0 z-50">
       {/* Top Bar - Professional Medical Style */}
-      <div className="bg-primary text-white text-xs py-2 px-4">
+      <div className="bg-primary text-white text-sm py-2 px-4">
         <div className="container mx-auto flex flex-col md:flex-row justify-between items-center gap-2">
           <div className="flex items-center gap-4">
-            <span className="flex items-center gap-1 opacity-90 hover:opacity-100 transition-opacity cursor-default">
-              <MapPin size={12} /> Gotri, Vadodara
-            </span>
+            <a href={CONTACT_INFO.mapLink} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 opacity-90 hover:opacity-100 transition-opacity cursor-pointer">
+              <MapPin size={14} /> Gotri, Vadodara
+            </a>
             <a href={`tel:${CONTACT_INFO.phone}`} className="flex items-center gap-1 opacity-90 hover:opacity-100 transition-opacity">
-              <Phone size={12} /> {CONTACT_INFO.phone}
+              <Phone size={14} /> {CONTACT_INFO.phone}
             </a>
           </div>
-          <span className="hidden md:block opacity-80 italic text-[10px] tracking-wider uppercase">
-            Restoring the Healer Within
-          </span>
+
+          <div className="flex items-center gap-4">
+            <div className="flex items-center gap-3">
+              <a href={CONTACT_INFO.instagramLink} target="_blank" rel="noopener noreferrer" className="opacity-90 hover:opacity-100 transition-opacity hover:scale-110 transform" aria-label="Instagram">
+                <Instagram size={20} />
+              </a>
+              <a href={CONTACT_INFO.facebookLink} target="_blank" rel="noopener noreferrer" className="opacity-90 hover:opacity-100 transition-opacity hover:scale-110 transform" aria-label="Facebook">
+                <Facebook size={20} />
+              </a>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -38,8 +46,8 @@ const Navbar: React.FC = () => {
 
           {/* Logo Section */}
           <Link to="/" className="flex items-center gap-3 group">
-            <div className="relative w-12 h-12 md:w-14 md:h-14 flex items-center justify-center bg-rose-50 rounded-full border border-primary/20 overflow-hidden group-hover:shadow-md transition-all">
-              <img src="https://picsum.photos/seed/lotuslogo/100/100" alt="Lotus Logo" className="object-cover w-full h-full opacity-90" />
+            <div className="relative w-16 h-16 md:w-20 md:h-20 flex items-center justify-center bg-rose-50 rounded-full border border-primary/20 overflow-hidden group-hover:shadow-md transition-all">
+              <img src="/logo.jpg" alt="Lotus Logo" className="object-cover w-full h-full opacity-90" />
             </div>
             <div className="flex flex-col">
               <h1 className="text-xl md:text-2xl font-serif font-bold text-gray-800 leading-tight group-hover:text-primary transition-colors">

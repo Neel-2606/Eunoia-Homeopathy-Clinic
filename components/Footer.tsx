@@ -11,16 +11,19 @@ const Footer: React.FC = () => {
 
           {/* Brand Column */}
           <div>
+            <div className="mb-4">
+              <img src="/logo.jpg" alt="Eunoia Homoeopathy Logo" className="w-16 h-16 rounded-full object-cover border-2 border-primary/20" />
+            </div>
             <h3 className="text-xl font-serif font-bold mb-4 text-primary">Eunoia Homoeopathy</h3>
             <p className="text-gray-400 text-sm mb-6 leading-relaxed">
               Restoring the Healer Within through classical constitutional homeopathy.
               We believe in treating the person, not just the disease.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="p-2 bg-gray-800 rounded-full hover:bg-primary transition-colors">
+              <a href={CONTACT_INFO.facebookLink} target="_blank" rel="noopener noreferrer" className="p-2 bg-gray-800 rounded-full hover:bg-primary transition-colors">
                 <Facebook size={18} />
               </a>
-              <a href="#" className="p-2 bg-gray-800 rounded-full hover:bg-primary transition-colors">
+              <a href={CONTACT_INFO.instagramLink} target="_blank" rel="noopener noreferrer" className="p-2 bg-gray-800 rounded-full hover:bg-primary transition-colors">
                 <Instagram size={18} />
               </a>
             </div>
@@ -43,7 +46,9 @@ const Footer: React.FC = () => {
             <ul className="space-y-4 text-sm text-gray-400">
               <li className="flex items-start gap-3">
                 <MapPin size={16} className="mt-1 text-primary shrink-0" />
-                <span>{CONTACT_INFO.address}</span>
+                <a href={CONTACT_INFO.mapLink} target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors flex-1">
+                  {CONTACT_INFO.address}
+                </a>
               </li>
               <li className="flex items-center gap-3">
                 <Phone size={16} className="text-primary shrink-0" />
