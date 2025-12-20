@@ -4,8 +4,8 @@ import { Activity, ShieldCheck } from 'lucide-react';
 const AboutPage: React.FC = () => {
     return (
         <main className="flex-grow">
-            
-           
+
+
             {/* Meet Dr. Hetal Section */}
             <section className="py-20 bg-white">
                 <div className="container mx-auto px-4">
@@ -69,8 +69,6 @@ const AboutPage: React.FC = () => {
                             {/* Icon Flag */}
                             <div className="md:w-24 bg-[#802640] relative flex items-center justify-center py-6 rounded-l-2xl rounded-br-[4rem] md:rounded-br-none md:rounded-r-[4rem] shadow-md z-10 shrink-0">
                                 <span className="text-4xl font-bold text-white">H</span>
-                                {/* Flap effect for detail */}
-                                <div className="absolute top-0 right-full w-4 h-full bg-[#5a1b2d] rounded-l-lg -z-10 hidden md:block opacity-50 skew-y-6 origin-top-right"></div>
                             </div>
 
                             <div className="p-6 md:pl-10 flex-grow flex flex-col justify-center">
@@ -90,7 +88,7 @@ const AboutPage: React.FC = () => {
                             </div>
                             <div className="p-6 md:pl-10 flex-grow flex flex-col justify-center">
                                 <h3 className="text-xl font-bold text-[#4a7a23] mb-2 flex items-center">
-                                  Empowering Patient Care <span className="ml-2 text-xs opacity-50 text-black font-normal uppercase tracking-wider">(Empathetic Care)</span>
+                                    Empowering Patient Care <span className="ml-2 text-xs opacity-50 text-black font-normal uppercase tracking-wider">(Empathetic Care)</span>
                                 </h3>
                                 <p className="text-gray-700 leading-relaxed text-sm">
                                     Listening to your story with compassion. Our pursuit of excellence is relentless, ensuring top-tier services and unparalleled satisfaction.
@@ -146,30 +144,68 @@ const AboutPage: React.FC = () => {
                 </div>
             </section>
 
-            {/* Mission & Vision Section */}
-            <section className="py-20 bg-white">
-                <div className="container mx-auto px-4">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-                        {/* Mission */}
-                        <div className="flex flex-col items-center text-center p-8 md:p-12 bg-rose-50 rounded-3xl border border-rose-100">
-                            <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center text-primary shadow-sm mb-6">
-                                <Activity size={32} />
+            {/* Mission & Vision Section - Premium Design */}
+            <section className="py-20 bg-gradient-to-b from-white via-rose-50/30 to-white relative overflow-hidden">
+                {/* Enhanced Decorative Elements */}
+                <div className="absolute top-20 left-10 w-64 sm:w-96 h-64 sm:h-96 bg-gradient-to-br from-rose-100/40 to-green-100/40 rounded-full mix-blend-multiply filter blur-3xl opacity-60 animate-pulse"></div>
+                <div className="absolute bottom-20 right-10 w-64 sm:w-96 h-64 sm:h-96 bg-gradient-to-tl from-green-100/40 to-rose-100/40 rounded-full mix-blend-multiply filter blur-3xl opacity-60 animate-pulse" style={{ animationDelay: '1s' }}></div>
+
+                <div className="container mx-auto px-4 relative z-10">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10 lg:gap-12">
+                        {/* Mission Card */}
+                        <div className="group relative">
+                            <div className="absolute inset-0 bg-gradient-to-br from-rose-200/50 to-rose-100/30 rounded-[2.5rem] blur-xl group-hover:blur-2xl transition-all duration-500 opacity-0 group-hover:opacity-100"></div>
+                            <div className="relative bg-white p-6 sm:p-8 lg:p-12 rounded-2xl sm:rounded-[2.5rem] shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 sm:hover:-translate-y-3 border-2 border-white hover:border-rose-100 overflow-hidden">
+                                {/* Animated Corner Accent */}
+                                <div className="absolute -top-12 -right-12 w-40 h-40 bg-gradient-to-br from-rose-100 to-rose-50 rounded-full opacity-50 group-hover:scale-150 transition-transform duration-700"></div>
+
+                                {/* Icon Container */}
+                                <div className="relative mb-6 sm:mb-8 flex justify-center">
+                                    <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-rose-50 to-white rounded-2xl sm:rounded-3xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-500 group-hover:scale-110 group-hover:rotate-6 border border-rose-100">
+                                        <Activity size={28} className="sm:w-9 sm:h-9 text-rose-600 group-hover:scale-110 transition-transform duration-500" />
+                                    </div>
+                                    {/* Decorative Ring */}
+                                    <div className="absolute -inset-2 border-2 border-rose-100 rounded-3xl opacity-0 group-hover:opacity-100 group-hover:scale-125 transition-all duration-500"></div>
+                                </div>
+
+                                <h3 className="text-2xl sm:text-3xl font-serif font-bold text-gray-900 mb-5 text-center group-hover:text-rose-700 transition-colors duration-300">
+                                    Our Mission
+                                </h3>
+                                <p className="text-gray-600 leading-relaxed text-base sm:text-lg text-center">
+                                    "Our commitment is to educate and motivate individuals to reach their optimal fitness potential and inspire them to continue reaching for their highest ideal of health."
+                                </p>
+
+                                {/* Bottom Accent Line */}
+                                <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-rose-400 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                             </div>
-                            <h3 className="text-3xl font-serif font-bold text-gray-900 mb-4">Our Mission</h3>
-                            <p className="text-gray-700 leading-relaxed text-lg">
-                                "Our commitment is to educate and motivate individuals to reach their optimal fitness potential and inspire them to continue reaching for their highest ideal of health."
-                            </p>
                         </div>
 
-                        {/* Vision */}
-                        <div className="flex flex-col items-center text-center p-8 md:p-12 bg-green-50 rounded-3xl border border-green-100">
-                            <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center text-secondary shadow-sm mb-6">
-                                <ShieldCheck size={32} />
+                        {/* Vision Card */}
+                        <div className="group relative">
+                            <div className="absolute inset-0 bg-gradient-to-br from-green-200/50 to-green-100/30 rounded-[2.5rem] blur-xl group-hover:blur-2xl transition-all duration-500 opacity-0 group-hover:opacity-100"></div>
+                            <div className="relative bg-white p-6 sm:p-8 lg:p-12 rounded-2xl sm:rounded-[2.5rem] shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 sm:hover:-translate-y-3 border-2 border-white hover:border-green-100 overflow-hidden">
+                                {/* Animated Corner Accent */}
+                                <div className="absolute -top-12 -right-12 w-40 h-40 bg-gradient-to-br from-green-100 to-green-50 rounded-full opacity-50 group-hover:scale-150 transition-transform duration-700"></div>
+
+                                {/* Icon Container */}
+                                <div className="relative mb-6 sm:mb-8 flex justify-center">
+                                    <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-green-50 to-white rounded-2xl sm:rounded-3xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-500 group-hover:scale-110 group-hover:rotate-6 border border-green-100">
+                                        <ShieldCheck size={28} className="sm:w-9 sm:h-9 text-green-600 group-hover:scale-110 transition-transform duration-500" />
+                                    </div>
+                                    {/* Decorative Ring */}
+                                    <div className="absolute -inset-2 border-2 border-green-100 rounded-3xl opacity-0 group-hover:opacity-100 group-hover:scale-125 transition-all duration-500"></div>
+                                </div>
+
+                                <h3 className="text-2xl sm:text-3xl font-serif font-bold text-gray-900 mb-5 text-center group-hover:text-green-700 transition-colors duration-300">
+                                    Our Vision
+                                </h3>
+                                <p className="text-gray-600 leading-relaxed text-base sm:text-lg text-center">
+                                    "Mind and Body Fitness for Lifelong Good Health can be achieved through holistic health approaches. To assist people in attaining their vision, dreams, and goals; to inspire, motivate, and educate people to live lives of health and well-being."
+                                </p>
+
+                                {/* Bottom Accent Line */}
+                                <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-green-400 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                             </div>
-                            <h3 className="text-3xl font-serif font-bold text-gray-900 mb-4">Our Vision</h3>
-                            <p className="text-gray-700 leading-relaxed text-lg">
-                                "Mind and Body Fitness for Lifelong Good Health can be achieved through holistic health approaches. To assist people in attaining their vision, dreams, and goals; to inspire, motivate, and educate people to live lives of health and well-being."
-                            </p>
                         </div>
                     </div>
                 </div>
