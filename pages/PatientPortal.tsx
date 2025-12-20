@@ -5,6 +5,7 @@ import { SERVICES, FAQS, FACILITIES, CONTACT_INFO, TESTIMONIALS } from '../const
 import TreatmentCard from '../components/TreatmentCard';
 import HealthImagesCarousel from '../components/HealthImagesCarousel';
 import '../styles/HeartButton.css';
+import '../styles/GradientButton.css';
 
 const PatientPortal: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -42,112 +43,79 @@ const PatientPortal: React.FC = () => {
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2 w-full sm:w-auto">
                 <Link
                   to="/book-appointment"
-                  className="heart-button w-full sm:w-auto shadow-lg shadow-rose-200"
+                  className="gradient-button w-full sm:w-auto"
                 >
-                  <span className="box">Book Appointment</span>
+                  <div className="gradient-bg"></div>
 
-                  <div className="star-1">
+                  <div className="glow-effect"></div>
+
+                  <div className="glitter-container">
+                    <div className="glitter"></div>
+                    <div className="glitter"></div>
+                    <div className="glitter"></div>
+                  </div>
+
+                  <div className="border-ring"></div>
+
+                  <div className="glitter-container">
+                    <div className="wave"></div>
+                  </div>
+
+                  <span className="button-content">
+                    <span>Book Appointment</span>
                     <svg
-                      height="25"
-                      width="25"
-                      viewBox="0 0 512 512"
-                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      fill="none"
+                      className="button-arrow"
                     >
                       <path
-                        d="M427.313,88.686c-47.803-47.803-125.213-47.803-173.016,0l-17.087,17.087l-17.087-17.087
-    c-47.803-47.803-125.213-47.803-173.016,0c-47.803,47.803-47.803,125.213,0,173.016l190.103,190.103
-    c4.88,4.88,11.316,7.322,17.752,7.322c6.435,0,13.871-2.442,18.751-7.322l190.103-190.103
-    C475.116,213.899,475.116,136.489,427.313,88.686z"
-                        fill="#fd1853"
+                        d="M13 7l5 5m0 0l-5 5m5-5H6"
+                        strokeWidth="2"
+                        strokeLinejoin="round"
+                        strokeLinecap="round"
                       ></path>
                     </svg>
-                  </div>
-                  <div className="star-2">
-                    <svg
-                      height="20"
-                      width="20"
-                      viewBox="0 0 512 512"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M427.313,88.686c-47.803-47.803-125.213-47.803-173.016,0l-17.087,17.087l-17.087-17.087
-    c-47.803-47.803-125.213-47.803-173.016,0c-47.803,47.803-47.803,125.213,0,173.016l190.103,190.103
-    c4.88,4.88,11.316,7.322,17.752,7.322c6.435,0,13.871-2.442,18.751-7.322l190.103-190.103
-    C475.116,213.899,475.116,136.489,427.313,88.686z"
-                        fill="#fd1853"
-                      ></path>
-                    </svg>
-                  </div>
-                  <div className="star-3">
-                    <svg
-                      height="9"
-                      width="9"
-                      viewBox="0 0 512 512"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M427.313,88.686c-47.803-47.803-125.213-47.803-173.016,0l-17.087,17.087l-17.087-17.087
-    c-47.803-47.803-125.213-47.803-173.016,0c-47.803,47.803-47.803,125.213,0,173.016l190.103,190.103
-    c4.88,4.88,11.316,7.322,17.752,7.322c6.435,0,13.871-2.442,18.751-7.322l190.103-190.103
-    C475.116,213.899,475.116,136.489,427.313,88.686z"
-                        fill="#fd1853"
-                      ></path>
-                    </svg>
-                  </div>
-                  <div className="star-4">
-                    <svg
-                      height="10"
-                      width="10"
-                      viewBox="0 0 512 512"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M427.313,88.686c-47.803-47.803-125.213-47.803-173.016,0l-17.087,17.087l-17.087-17.087
-    c-47.803-47.803-125.213-47.803-173.016,0c-47.803,47.803-47.803,125.213,0,173.016l190.103,190.103
-    c4.88,4.88,11.316,7.322,17.752,7.322c6.435,0,13.871-2.442,18.751-7.322l190.103-190.103
-    C475.116,213.899,475.116,136.489,427.313,88.686z"
-                        fill="#fd1853"
-                      ></path>
-                    </svg>
-                  </div>
-                  <div className="star-5">
-                    <svg
-                      height="20"
-                      width="20"
-                      viewBox="0 0 512 512"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M427.313,88.686c-47.803-47.803-125.213-47.803-173.016,0l-17.087,17.087l-17.087-17.087
-    c-47.803-47.803-125.213-47.803-173.016,0c-47.803,47.803-47.803,125.213,0,173.016l190.103,190.103
-    c4.88,4.88,11.316,7.322,17.752,7.322c6.435,0,13.871-2.442,18.751-7.322l190.103-190.103
-    C475.116,213.899,475.116,136.489,427.313,88.686z"
-                        fill="#fd1853"
-                      ></path>
-                    </svg>
-                  </div>
-                  <div className="star-6">
-                    <svg
-                      height="7"
-                      width="7"
-                      viewBox="0 0 512 512"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M427.313,88.686c-47.803-47.803-125.213-47.803-173.016,0l-17.087,17.087l-17.087-17.087
-    c-47.803-47.803-125.213-47.803-173.016,0c-47.803,47.803-47.803,125.213,0,173.016l190.103,190.103
-    c4.88,4.88,11.316,7.322,17.752,7.322c6.435,0,13.871-2.442,18.751-7.322l190.103-190.103
-    C475.116,213.899,475.116,136.489,427.313,88.686z"
-                        fill="#fd1853"
-                      ></path>
-                    </svg>
-                  </div>
+                    <span className="button-underline"></span>
+                  </span>
                 </Link>
                 <Link
                   to="/contact"
-                  className="w-full sm:w-auto bg-white hover:bg-gray-50 text-gray-800 border border-gray-200 px-6 sm:px-8 py-4 rounded-full font-bold shadow-sm transition-all transform hover:-translate-y-1 text-center text-base sm:text-base"
+                  className="gradient-button w-full sm:w-auto"
                 >
-                  Contact Us
+                  <div className="gradient-bg"></div>
+
+                  <div className="glow-effect"></div>
+
+                  <div className="glitter-container">
+                    <div className="glitter"></div>
+                    <div className="glitter"></div>
+                    <div className="glitter"></div>
+                  </div>
+
+                  <div className="border-ring"></div>
+
+                  <div className="glitter-container">
+                    <div className="wave"></div>
+                  </div>
+
+                  <span className="button-content">
+                    <span>Contact Us</span>
+                    <svg
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      fill="none"
+                      className="button-arrow"
+                    >
+                      <path
+                        d="M13 7l5 5m0 0l-5 5m5-5H6"
+                        strokeWidth="2"
+                        strokeLinejoin="round"
+                        strokeLinecap="round"
+                      ></path>
+                    </svg>
+                    <span className="button-underline"></span>
+                  </span>
                 </Link>
               </div>
 
@@ -411,8 +379,40 @@ const PatientPortal: React.FC = () => {
         <div className="container mx-auto px-4">
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-gray-900 mb-6 sm:mb-8 leading-tight px-4">Ready to restore your health?</h2>
           <p className="text-gray-600 mb-8 max-w-xl mx-auto">Book a consultation today and start your journey towards a healthier, happier life.</p>
-          <Link to="/book-appointment" className="inline-block bg-primary text-white px-10 py-4 rounded-full font-bold shadow-xl hover:bg-rose-700 transition-all transform hover:-translate-y-1">
-            Book Appointment Now
+          <Link to="/book-appointment" className="gradient-button inline-block">
+            <div className="gradient-bg"></div>
+
+            <div className="glow-effect"></div>
+
+            <div className="glitter-container">
+              <div className="glitter"></div>
+              <div className="glitter"></div>
+              <div className="glitter"></div>
+            </div>
+
+            <div className="border-ring"></div>
+
+            <div className="glitter-container">
+              <div className="wave"></div>
+            </div>
+
+            <span className="button-content">
+              <span>Book Appointment Now</span>
+              <svg
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                fill="none"
+                className="button-arrow"
+              >
+                <path
+                  d="M13 7l5 5m0 0l-5 5m5-5H6"
+                  strokeWidth="2"
+                  strokeLinejoin="round"
+                  strokeLinecap="round"
+                ></path>
+              </svg>
+              <span className="button-underline"></span>
+            </span>
           </Link>
         </div>
       </section >
