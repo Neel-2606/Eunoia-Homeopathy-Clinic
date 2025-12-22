@@ -3,7 +3,7 @@ import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-d
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import FloatingContact from './components/FloatingContact';
-import PatientPortal from './pages/PatientPortal';
+import HomePage from './pages/HomePage';
 import StudentPortal from './pages/StudentPortal';
 import ContactPage from './pages/ContactPage';
 import BookAppointmentPage from './pages/BookAppointmentPage';
@@ -28,7 +28,7 @@ const App: React.FC = () => {
         <Navbar />
 
         <Routes>
-          <Route path="/" element={<PatientPortal />} />
+          <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/student" element={<StudentPortal />} />
           <Route path="/contact" element={<ContactPage />} />

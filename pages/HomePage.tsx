@@ -6,7 +6,7 @@ import TreatmentCard from '../components/TreatmentCard';
 import HealthImagesCarousel from '../components/HealthImagesCarousel';
 import '../styles/HeartButton.css';
 
-const PatientPortal: React.FC = () => {
+const HomePage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
 
   const filteredServices = SERVICES.filter(service =>
@@ -228,9 +228,41 @@ const PatientPortal: React.FC = () => {
               <div className="h-2 w-2 bg-secondary rounded-full"></div>
               <div className="h-1 w-12 sm:w-16 bg-gradient-to-r from-secondary to-transparent rounded-full"></div>
             </div>
-            <p className="text-base sm:text-lg lg:text-xl text-gray-600 leading-relaxed font-light px-4">
-              We don't just treat symptoms; we treat the person. Our approach is holistic, gentle, and scientifically grounded.
-            </p>
+            <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+              <div className="w-full lg:w-1/2">
+                <p className="text-base sm:text-lg lg:text-xl text-gray-600 leading-relaxed font-light mb-8">
+                  We don't just treat symptoms; we treat the person. Our approach is holistic, gentle, and scientifically grounded.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <a
+                    href="https://maps.app.goo.gl/xbU92LeY96UzBKj1A"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center gap-2 bg-primary text-white px-8 py-4 rounded-full font-bold shadow-xl hover:bg-rose-700 transition-all transform hover:-translate-y-1"
+                  >
+                    <MapPin size={20} />
+                    Start Tracking Location
+                  </a>
+                </div>
+              </div>
+
+              {/* Map Image Section */}
+              <div className="w-full lg:w-1/2">
+                <div className="relative group">
+                  <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-rose-400/20 rounded-3xl blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  <div className="relative rounded-3xl overflow-hidden border-4 border-white shadow-2xl transition-transform duration-500 group-hover:scale-[1.02]">
+                    <img
+                      src="/eunoia-location-map.jpg"
+                      alt="Eunoia Homeopathy Clinic Location"
+                      className="w-full h-[400px] object-cover"
+                    />
+                    <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/50 to-transparent p-6">
+                      <p className="text-white font-serif text-lg font-bold">Visit our clinic in Gotri, Vadodara</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10 lg:gap-12">
@@ -421,4 +453,4 @@ const PatientPortal: React.FC = () => {
   );
 };
 
-export default PatientPortal;
+export default HomePage;
